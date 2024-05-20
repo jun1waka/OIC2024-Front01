@@ -15,7 +15,7 @@ let HTML="";
 for(let j = 0 ; j <= 3 ; j++){
 	const eltr = document.createElement('tr');
 	for(let i = 1 ; i <= 13; i++){
-		const eltd = document.createElemnt('td');
+		const eltd = document.createElement('td');
 	   console.log("i:"+i);
 	   console.log("j:"+j);
 	   cards[count] = new Card( card_type[j] , i );

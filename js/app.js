@@ -4,6 +4,15 @@ class Card {
 		this.type = type;
 		this.num = num;
 	}
+	color(){
+		switch(this.type){
+			case '&diams;':
+			case '&hearts;':
+				return 'red';
+			default:
+				return 'black';
+		}
+	}
 }
 const cards=[];
 let count = 0;
@@ -40,13 +49,8 @@ for(let j = 0 ; j <= 3 ; j++){
 		const eltd = document.createElement('td');
 	   console.log("i:"+i);
 	   console.log("j:"+j);
-	   if(j==1 || j==2){
-	   		eltd.style.color = 'red';
-	   		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
-		}else{
-	   		eltd.style.color = 'black';
-	   		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
-		}
+   		eltd.style.color = cards[count].color();
+   		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
 		eltr.appendChild(eltd);
 	   count++;
 	}

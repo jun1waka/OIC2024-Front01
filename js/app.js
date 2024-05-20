@@ -33,7 +33,7 @@ for(let i = 0;i < 52 ; i++){
 	console.log(`i = ${i},type= ${cards[i].type},num= ${cards[i].num}`);
 }
 //テーブル表示
-count＝０；
+count = 0;
 for(let j = 0 ; j <= 3 ; j++){
 	const eltr = document.createElement('tr');
 	for(let i = 1 ; i <= 13; i++){
@@ -56,3 +56,4 @@ for(let j = 0 ; j <= 3 ; j++){
 
 //eltrump.innerHTML=HTML;
 // eltrump.innerHTML=`${card_type[2]}<br>${card_num}`;
+

@@ -34,11 +34,10 @@ for(let j = 0 ; j <= 3 ; j++){
 //shuffle
 for(let i = 0;i < 52 ; i++){
 	//入替処理
-	let a = cards[i];
-	let b = cards[Math.trunc(Math.random()*52)];
-	let x = a;
-	a = b;
-	b = x;
+	let swp_idx=Math.trunc(Math.random()*52;
+	let x = cards[i];
+	cards[i] = cards[swp_idx];
+	cards[swp_idx] = x;
 }
 for(let i = 0;i < 52 ; i++){
 	//表示
@@ -48,3 +47,4 @@ for(let i = 0;i < 52 ; i++){
 
 //eltrump.innerHTML=HTML;
 // eltrump.innerHTML=`${card_type[2]}<br>${card_num}`;
+

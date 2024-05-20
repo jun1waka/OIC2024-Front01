@@ -30,6 +30,21 @@ for(let j = 0 ; j <= 3 ; j++){
 	}
 	eltrump.appendChild(eltr);
 }
+
+//shuffle
+for(let i = 0;i < 52 ; i++){
+	//入替処理
+	let a = cards[i];
+	let b = cards[Math.trunc(Math.random()*52)];
+	let x = a;
+	a = b;
+	b = x;
+}
+for(let i = 0;i < 52 ; i++){
+	//表示
+	console.log(`i = ${i},type= ${cards[i].type},num= ${cards[i].num}`);
+}
+
+
 //eltrump.innerHTML=HTML;
 // eltrump.innerHTML=`${card_type[2]}<br>${card_num}`;
-

@@ -49,6 +49,7 @@ for(let j = 0 ; j <= 3 ; j++){
 		const eltd = document.createElement('td');
 	   console.log("i:"+i);
 	   console.log("j:"+j);
+   		eltd.setAttribute('id',count);
    		eltd.style.color = cards[count].color();
    		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
 		eltr.appendChild(eltd);

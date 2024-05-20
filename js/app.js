@@ -34,7 +34,7 @@ for(let j = 0 ; j <= 3 ; j++){
 //shuffle
 for(let i = 0;i < 52 ; i++){
 	//入替処理
-	let swp_idx=Math.trunc(Math.random()*52;
+	let swp_idx=Math.trunc(Math.random()*52);
 	let x = cards[i];
 	cards[i] = cards[swp_idx];
 	cards[swp_idx] = x;

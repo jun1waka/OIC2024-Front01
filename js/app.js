@@ -22,6 +22,7 @@ let issecond;
 let count = 0;
 
 const eltrump=document.querySelector("#trump");
+consrt elhelp==document.getElementById('help');
 const card_type=['&spades;','&diams;','&hearts;','&clubs;']; 
 
 for(let j = 0 ; j <= 3 ; j++){
@@ -69,6 +70,7 @@ for(let j = 0 ; j <= 3 ; j++){
    					flip(count);
    					//check
    					checkpair();
+   					return;
    				}
    			}else{
    				isfirst = { 'id' : count , 'card' :cards[count]};
@@ -82,6 +84,30 @@ for(let j = 0 ; j <= 3 ; j++){
 	}
 	eltrump.appendChild(eltr);
 }
+
+//helpボタン
+help.addEventListener('click',function(){
+	let count=0;
+	for(let j = 0 ; j <= 3 ; j++){
+		for(let i = 1 ; i <= 13; i++){
+			flip(count);
+			count++;
+		}
+	}
+	//ちょっと待ってから消す
+	count = 0;
+	setTimeout(function(){
+		for(let j = 0 ; j <= 3 ; j++){
+			for(let i = 1 ; i <= 13; i++){
+				flip(count);
+				count++;
+			}
+		}
+	},3000);
+	
+});
+
+
 
 //check
 function checkpair(){

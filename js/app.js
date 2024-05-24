@@ -59,12 +59,16 @@ for(let j = 0 ; j <= 3 ; j++){
 }
 
 //裏返し
+function flip(count){
+	const eltd = document.getElementById(count);
+	eltd.style.color = 'green';
+	eltd.innerHTML = '**<br>**';
+}
+
 count = 0;
 for(let j = 0 ; j <= 3 ; j++){
 	for(let i = 1 ; i <= 13; i++){
-		const eltd = document.getElementById(count);
-		eltd.style.color = 'green';
-		eltd.innerHTML = '**<br>**';
+		flip(count);
 		count++;
 	}
 }

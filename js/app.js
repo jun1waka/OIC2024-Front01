@@ -55,6 +55,8 @@ for(let j = 0 ; j <= 3 ; j++){
 	   console.log("j:"+j);
    		eltd.setAttribute('id',count);
    		eltd.style.color = cards[count].color();
+   		eltd.style.width = '1.5em';
+   		eltd.style.textAlign = 'center';
    		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
    		eltd.addEventListener('click',function(){
    			let count = this.id;
@@ -89,10 +91,13 @@ function checkpair(){
 		issecond.card.ispair = true;
 	}else{
 		console.log('そろってない！');
-		flip(isfirst.id);
-		flip(issecond.id);
-		isfirst = false;
-		issecond = false;
+		//ちょっと待ってから消す
+		setTimeout(function(){
+			flip(isfirst.id);
+			flip(issecond.id);
+			isfirst = false;
+			issecond = false;
+		},3000);
 	}
 }
 

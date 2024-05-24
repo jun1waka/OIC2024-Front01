@@ -134,6 +134,11 @@ function flip(count){
 	console.log("flip: count=" + count);
 	const eltd = document.getElementById(count);
 	const card = cards[count];
+	//ペアがそろったものは除外
+	if(card.ispair){
+		return;
+	}
+	
 	if(card.isopen){
 		eltd.style.color = 'green';
 		eltd.innerHTML = '**<br>**';

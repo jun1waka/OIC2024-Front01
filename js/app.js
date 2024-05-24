@@ -65,6 +65,7 @@ for(let j = 0 ; j <= 3 ; j++){
 		const eltd = document.getElementById(count);
 		eltd.style.color = 'green';
 		eltd.innerHTML = '**<br>**';
+		count++;
 	}
 }
 

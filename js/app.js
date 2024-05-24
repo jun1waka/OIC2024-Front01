@@ -58,7 +58,16 @@ for(let j = 0 ; j <= 3 ; j++){
 	eltrump.appendChild(eltr);
 }
 
+//裏返し
+count = 0;
+for(let j = 0 ; j <= 3 ; j++){
+	for(let i = 1 ; i <= 13; i++){
+		const eltd = document.getElementById(count);
+		eltd.style.color = 'green';
+		eltd.innerHTML = '**<br>**';
+	}
+}
+
 
 //eltrump.innerHTML=HTML;
 // eltrump.innerHTML=`${card_type[2]}<br>${card_num}`;
-

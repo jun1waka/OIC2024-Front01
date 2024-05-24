@@ -53,6 +53,11 @@ for(let j = 0 ; j <= 3 ; j++){
    		eltd.setAttribute('id',count);
    		eltd.style.color = cards[count].color();
    		eltd.innerHTML = `${ cards[count].type}<br>${ cards[count].num}`;
+   		eltd.addEventListener('click',function(){
+   			let count = this.id;
+   			console.log('click: id=' + count);
+   			flip(count);
+   		});
 		eltr.appendChild(eltd);
 	   count++;
 	}
@@ -82,6 +87,7 @@ for(let j = 0 ; j <= 3 ; j++){
 		count++;
 	}
 }
+flip(15);
 
 
 //eltrump.innerHTML=HTML;

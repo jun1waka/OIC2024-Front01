@@ -22,7 +22,7 @@ let issecond;
 let count = 0;
 
 const eltrump=document.querySelector("#trump");
-consrt elhelp==document.getElementById('help');
+const elhelp=document.getElementById('help');
 const card_type=['&spades;','&diams;','&hearts;','&clubs;']; 
 
 for(let j = 0 ; j <= 3 ; j++){

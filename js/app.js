@@ -3,6 +3,7 @@ class Card {
 	constructor( type , num ){
 		this.type = type;
 		this.num = num;
+		this.isopen = true;
 	}
 	color(){
 		switch(this.type){
@@ -60,9 +61,18 @@ for(let j = 0 ; j <= 3 ; j++){
 
 //裏返し
 function flip(count){
+	console.log("flip: count=" + count);
 	const eltd = document.getElementById(count);
-	eltd.style.color = 'green';
-	eltd.innerHTML = '**<br>**';
+	const card = cards[count];
+	if(card.isopen){
+		eltd.style.color = 'green';
+		eltd.innerHTML = '**<br>**';
+		card.isopen = false;
+	}else{
+   		eltd.style.color = card.color();
+   		eltd.innerHTML = `${ card.type}<br>${ card.num}`;
+   		card.isopen = true;
+   	}
 }
 
 count = 0;

@@ -87,7 +87,6 @@ for(let j = 0 ; j <= 3 ; j++){
 		count++;
 	}
 }
-flip(15);
 
 
 //eltrump.innerHTML=HTML;

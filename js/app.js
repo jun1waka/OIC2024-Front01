@@ -89,6 +89,8 @@ function checkpair(){
 		console.log('そろった！');
 		isfirst.card.ispair = true;
 		issecond.card.ispair = true;
+		isfirst = false;
+		issecond = false;
 	}else{
 		console.log('そろってない！');
 		//ちょっと待ってから消す

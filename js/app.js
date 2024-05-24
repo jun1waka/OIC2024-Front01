@@ -4,6 +4,7 @@ class Card {
 		this.type = type;
 		this.num = num;
 		this.isopen = true;
+		this.ispair = false;
 	}
 	color(){
 		switch(this.type){
@@ -16,6 +17,8 @@ class Card {
 	}
 }
 const cards=[];
+let isfirst;
+let issecond;
 let count = 0;
 
 const eltrump=document.querySelector("#trump");
@@ -56,12 +59,41 @@ for(let j = 0 ; j <= 3 ; j++){
    		eltd.addEventListener('click',function(){
    			let count = this.id;
    			console.log('click: id=' + count);
-   			flip(count);
+   			if(isfirst){
+   				if(issecond){
+   					return;
+   				}else{
+   					issecond =  { 'id' : count , 'card' :cards[count]};
+   					flip(count);
+   					//check
+   					checkpair();
+   				}
+   			}else{
+   				isfirst = { 'id' : count , 'card' :cards[count]};
+   				flip(count);
+   			}
+   			console.log('isfirst :'+ isfirst.id + 'card.num = ' + isfirst.card.num);
+   			console.log('issecond :'+ issecond.id + 'card.num = ' + issecond.card.num);
    		});
 		eltr.appendChild(eltd);
 	   count++;
 	}
 	eltrump.appendChild(eltr);
+}
+
+//check
+function checkpair(){
+	if(isfirst.card.num == issecond.card.num){
+		console.log('そろった！');
+		isfirst.card.ispair = true;
+		issecond.card.ispair = true;
+	}else{
+		console.log('そろってない！');
+		flip(isfirst.id);
+		flip(issecond.id);
+		isfirst = false;
+		issecond = false;
+	}
 }
 
 //裏返し
